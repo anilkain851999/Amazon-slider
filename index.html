@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <title>Amazon Slider</title>
+   </head>
+   <body>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+         <div id="demo-content">
+            <div id="product-view">
+               <div class="preview-image">
+                  <div id="thumbnail-container">
+                     <img class="thumbnail focused" src="img/slide1.webp">
+                     <img class="thumbnail" src="img/slide2.jpg">
+                     <img class="thumbnail" src="img/slide3.jpg">
+                     <img class="thumbnail" src="img/slide4.jpg">
+                  </div>
+                  <div id="preview-enlarged">
+                     <img src="img/slide1.webp">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </button>
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+         <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Images</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <div id="demo-content">
+                     <div id="product-view modal_box_view">
+                        <div class="preview-image modal_box">
+                           <div id="preview-enlarged">
+                              <img src="img/slide1.webp">
+                           </div>
+                           <div class="content_img_body">
+                              <div class="content_text">
+                                 <h5>NutriGlow Gold Kesar Facial Kit for Women| 6-Pieces Skin Care/Skin Cleanup Set | Prevents from Anti Aging| 250g + 10ml</h5>
+                                 <p>Scent Name:Gold Kesar Facial Kit</p>
+                              </div>
+                              <div id="thumbnail-container">
+                                 <img class="thumbnail focused" src="img/slide1.webp">
+                                 <img class="thumbnail" src="img/slide2.jpg">
+                                 <img class="thumbnail" src="img/slide3.jpg">
+                                 <img class="thumbnail" src="img/slide4.jpg">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+      <script>
+         $("#thumbnail-container img").hover(function() {
+             var src = $(this).attr("src");
+             $("#preview-enlarged img").attr("src", src);
+             $('.thumbnail').removeClass('focused');
+             $(this).addClass('focused');
+         
+         });
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+   </body>
+</html>
